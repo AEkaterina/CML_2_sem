@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#2B2A29;stroke-width:100}
+    .fil0 {fill:url(#id1)}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <path d="M2589 -412l13520 3956 0 13612 -13520 -3956 0 -13612z"/>
+    </clipPath>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="7909.06" y1="10145.2" x2="11578" y2="4536.02">
+   <stop offset="0" style="stop-opacity:1; stop-color:#E53924"/>
+   <stop offset="0.560784" style="stop-opacity:1; stop-color:#F09217"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FCEB0A"/>
+  </linearGradient>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2076540443424">
+   <g style="clip-path:url(#id0)">
+    <image x="2589" y="-412" width="13521" height="17567" xlink:href="ex2_2_Images\ex2_2_ImgID1.png"/>
+   </g>
+  </g>
+  <polygon class="fil0 str0" points="10178,1162 11013,7070 14919,6198 9514,8812 11557,12228 7381,7936 4738,10919 7562,5652 3886,4080 9807,5117 "/>
+ </g>
+</svg>

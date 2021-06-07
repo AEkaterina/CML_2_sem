@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 6</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <svg class = "box">
+        <!--ex 1-->
+        <line x1="200" y1="50" x2="20" y2="130" stroke="Indigo" stroke-width="8" />
+        <rect x="300" y="125" width="220" height="130" rx="20" ry="40" fill="DeepSkyBlue" stroke="blue" stroke-width="5"/>
+        <ellipse cx="285" cy="70" rx="220" ry="30" fill="RoyalBlue" fill-opacity="50%" stroke="RoyalBlue" stroke-width="5" />
+        <!--ex 2-->
+        <circle class="circle" cx="10" cy="380" r="70" />
+        <rect class="rect" x="105" y="300" width="212" height="115"/>
+        <!--ex 3-->
+        <defs>
+            <linearGradient id = "Gradient1">
+                <stop offset = "15%" stop-color = "green" />
+                <stop offset = "100%" stop-color = "yellow" />
+            </linearGradient>
+            <radialGradient id = "Gradient2">
+                <stop offset = "30%" stop-color = "skyBlue"/>
+                <stop offset = "95%" stop-color = "dodgerBlue"/>
+            </radialGradient>
+        </defs>
+        <rect x="800" y="200" width="150" height="150" rx="13" fill="url(#Gradient1)"/>
+        <circle cx="150" cy="200" r="70" fill="url(#Gradient2)"/>
+
+    </svg>
+</body>
+</html>

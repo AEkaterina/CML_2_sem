@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Перемещение картинки и текста</title>
+        <style type="text/css">
+            #img {
+                position: absolute;
+                margin-left: 500px;
+                margin-top: 100px;
+                width: 250px;
+                height: 230px;
+            }
+            #text {
+                margin: 0;
+                font-family: 'Times New Roman';
+                position: absolute;
+                font-size: 30px;
+                color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <img id = "img" src="584c54bfad042158ea2b0cdd.png">
+        <p id = "text">Перетащите этот текст</p>
+                
+    <script type="text/javascript">
+        let coords, shiftX, shiftY;
+
+        function getCoords(elem) {                  //определить коордиаты картинки
+        let box = elem.getBoundingClientRect();     //координаты элемента относительно окна 
+        return {                                    //возращает значение, на которые сдвинут элемент по вертикали и горизонтали 
+            top: box.top + pageYOffset, left: box.left + pageXOffset 
+        };
+        }
+
+
+        let img = document.getElementById('img');
+
+        img.ondragstart = function() {              //когда начинаем перемещать объект
+        return false;
+        };
+
+        //1.Нажатие
+        img.onmousedown = function(e) {             //событие - кнопка мыши нажата
+            coords = getCoords(img);
+            shiftX = e.pageX - coords.left;         //горизонтальная координата
+            shiftY = e.pageY - coords.top;          //вертикальная
+
+
+            function move(e) {
+                img.style.left = e.pageX - shiftX - 500 + 'px';
+                img.style.top = e.pageY - shiftY - 100 + 'px';
+            }
+            
+            //2.Переместить
+            document.onmousemove = function(e) {      //мышь двигается
+                move(e);
+            }
+
+            //3.Конец переноса
+            img.onmouseup = function() {              //мышь не нажата
+                document.onmousemove = null;
+                img.onmouseup = null;
+            }
+        }
+
+        //Текст
+        let text = document.getElementById('text');
+
+        text.ondragstart = function() {
+            return false;
+        };
+
+        //1. Нажатие 
+        text.onmousedown = function(e) { 
+            coords = getCoords(text);
+            shiftX = e.pageX - coords.left;
+            shiftY = e.pageY - coords.top;
+
+            function move(e) {
+                text.style.left = e.pageX - shiftX + 'px';
+                text.style.top = e.pageY - shiftY + 'px';
+            }  
+
+            //2. Перетащить
+            document.onmousemove = function(e) {
+                move(e);
+            }
+
+            //3. Конец переноса
+            text.onmouseup = function() {
+                document.onmousemove = null;
+                text.onmouseup = null;
+            }
+        }
+
+    </script>
+    </body>
+</html>

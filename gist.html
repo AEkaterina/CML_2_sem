@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Canvas</title>
+        <meta charset="utf-8">
+        <style>
+            .canv {
+                float: left;
+            }
+
+            .canv2 {
+                float: right;
+            }
+
+            canvas {
+                background:tan;
+                border: 4px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas class="canv"></canvas>
+        <script>
+            var canv = document.getElementsByClassName("canv")[0];
+canv.width = 600;
+canv.height = 470;
+
+var a = canv.getContext("2d");
+
+a.lineWidth = 2;
+a.beginPath();
+a.strokeStyle = "black";
+a.moveTo(70, 400);
+a.lineTo(550, 400);
+
+a.moveTo(80, 408);
+a.lineTo(80,50);
+
+a.stroke();
+
+for(let i = 370; i>=60; i-=30) {
+    a.beginPath();
+    a.moveTo(70, i);
+    a.lineTo(550, i);
+    a.stroke();
+}
+
+a.font = "20px Times New Poman";
+a.fillStyle = "black";
+var x = 0;
+for(let i = 405; i >= 60; i -= 30) {
+    a.fillText(x, 47, i);
+    x++;
+}
+
+a.fillStyle = "red";
+a.fillRect(130, 221, 60, 178);
+
+a.fillStyle = "blue";
+a.fillRect(240, 71, 60, 328);
+
+a.fillStyle = "green";
+a.fillRect(350, 161, 60, 238);
+
+a.fillStyle = "yellow";
+a.fillRect(460, 311, 60, 88);
+
+a.fillStyle = "black";
+a.font = "25px Times New Roman";
+a.rotate(-Math.PI/2);
+a.fillText("Количество лаб", -300, 33);
+
+a.rotate(Math.PI/2);
+a.font = "30px Times New Roman";
+a.fillText("Гистограмма", 220, 40);
+
+a.font = "18px Times New Roman";
+a.fillText("HTML", 135, 423); 
+
+a.fillText("JavaScript", 233, 423);
+
+a.fillText("XML", 360, 423);
+
+a.fillText("HTML5", 462, 423);
+        </script>
+    </body>
+</html>

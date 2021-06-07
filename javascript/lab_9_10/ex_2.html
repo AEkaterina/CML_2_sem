@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Движение по линии</title>
+        <style type="text/css">
+           #img {
+            margin-left: 1000px;
+            width: 250px;
+            height: 290px;
+           }
+        </style>
+    </head>
+    <script type="text/javascript">
+    let x = 1000;
+    let a;
+
+    function move_img(){
+        a = setInterval("move()", 1);         //повторяет функцию с задержкой в 1 мс, т е каждые 1 мс  
+    }
+
+    function move(){                                            //движение картинки
+        let img = document.getElementById('img');
+        if(x == 0)                                              //если картинка на конечной позиции
+        {
+            clearInterval(a);                                   //останавдиваем выполнение функции
+        }
+        else {
+            x--;                                                
+            img.style.marginLeft = x + "px";                    //двигаем картинку влево
+        }
+    }
+    </script>
+    <body>
+    <img id="img" src="584c55a0ef86d158ea2e7cd5.png" onclick="move_img()">        
+    </body>    
+</html>

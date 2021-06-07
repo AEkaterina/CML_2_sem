@@ -1,0 +1,67 @@
+table {
+    font-size: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    margin: 50px auto;
+    text-align: center;
+    border-spacing: 5px;
+    background: rgb(177, 173, 161);
+    color: #656665;
+    border: 12px solid rgb(177, 173, 161);
+    border-radius: 20px;
+}
+
+td {
+    background: #F5D7BF;
+    padding: 7px;
+}
+
+.badM {
+    background: red;
+}
+
+.goodM {
+    background: green;
+}
+
+
+
+
+
+
+
+
+<body>
+<table border = "1">
+    <tr>
+        <td>Фамилия</td>
+        <td>Имя</td>
+        <td>Проходной балл</td>
+        <td>Дата рождения</td>
+        <td>Средний балл за сессию</td>
+        </tr>
+    <sxl:for-each select = "group/student">
+    <xsl:sort select = "birthDate"/>
+        <tr>
+            <xsl:choose>
+                <xsl:choose>
+                <xsl:when test = "avScore &lt; 6">
+                    <td bgcolor = "red"><xsl:value-of select  = "name"/></td>
+                </xsl:when> 
+
+                <xsl:when test = "avScore &gt; 6">
+                    <td><xsl:value-of select  = "name"/></td>
+                </xsl:when>
+
+                <xsl:othewise>
+                    <td bgcolor = "green"><xsl:value-of select = "name"></td>
+                </xst:othewise>
+            </xsl:choose>
+
+            <td><xsl:value-of select = "surname"/></td>
+            <td><xsl:value-of select = "name"/></td>
+            <td><xsl:value-of select = "score"/></td>
+            <td><xsl:value-of select = "birthDate"/></td>
+        </tr>                    
+    </xsl:for-each>
+</table>
+</body>

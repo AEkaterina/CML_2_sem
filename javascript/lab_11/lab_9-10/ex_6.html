@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Меню</title>
+        <style type="text/css">
+        div {
+            position: fixed;
+        }
+
+        .menu-item {
+            width: 135px;
+            text-align: center;
+            padding: 2px;
+            border: 2px solid rgb(255, 251, 0);
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu-item .submenu {
+            margin-top: 4px;
+            height: 50px;
+            width: 135px;
+            text-align: center;
+            background: green;
+            display: none;
+            position: absolute;
+            cursor: pointer;
+        }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    </head>
+        
+    <body>
+        <div id="main">
+            <div class="menu-item">
+                <span>Меню 1</span>
+                <div class="submenu">
+                    <span>Подменю</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span>Меню 2</span>
+                <div class="submenu">
+                    <span>Подменю</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span>Меню 3</span>
+                <div class="submenu">
+                    <span>Подменю</span>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script type="text/javascript">
+            $("#main").mouseover(function(event){
+                var target = event.target;
+                if (target.className == 'menu-item') {
+                    var s = target.getElementsByClassName('submenu');
+                    $(s).css("display", "block");
+                }
+            });
+            
+            $(document).mousemove(function(event){
+                var target = event.target;
+                if (target.className!='menu-item' && target.className!='submenu') {
+                    closeMenu();
+                }
+            });
+            
+            function closeMenu() {
+                var s = document.getElementsByClassName('submenu');
+                for (var i = 0; i < s.length; i++) {
+                    $(s).css("display", "none");
+                }
+            }
+        </script>
+</html>

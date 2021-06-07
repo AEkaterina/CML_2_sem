@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/css" href = "style_1.css"?>
+
+<speciality
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "univ.xsd">
+    <university>
+        <name>Белорусский государственный университет информатики и радиоэлектроники</name>
+        <score>360 баллов</score>
+        <plan>85</plan>
+        <city>Минск</city>
+    </university>
+
+    <university>
+        <name>Белорусский национальный технический университет</name>
+        <score>340</score>
+        <plan>30</plan>
+        <city>Минск</city>
+    </university>
+
+    <university>
+        <name>Брестский государственный технический университет</name>
+        <score>315</score>
+        <plan>30</plan>
+        <city>Брест</city>
+    </university>
+
+    <university>
+        <name>Витебский государственный университет имени П.М. Машерова</name>
+        <score>311</score>
+        <plan>27</plan>
+        <city>Витебск</city>
+    </university>
+
+    <university>
+        <name>Гомельский государственный университет имени Франциска Скорины</name>
+        <score>322</score>
+        <plan>30</plan>
+        <city>Гомель</city>
+    </university>
+    
+
+</speciality>

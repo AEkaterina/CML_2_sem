@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Animation</title>
+        <style tupe="text/css">
+            .main{
+            width: 800px;
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: 500px;
+            background-color:bisque;
+            justify-content: space-between;
+            }
+            @keyframes move {
+                0% {margin-left: 10px;}
+                50% {margin-left: 500px;}
+                100% {margin-left: 10px;}
+            }
+            @keyframes change_radius {
+                0%{width: 170px; height: 170px; border-radius: 85px;}
+                25%{width: 100px; height: 100px; border-radius: 50px;}
+                75%{width: 240px; height: 240px; border-radius: 120px;}
+                100%{width: 170px; height: 170px; border-radius: 85px;}
+            }
+            @keyframes change_color {
+                0%{background-color: purple; border: 10px gold solid;}
+                50%{background-color:violet; border: 20px red solid;}
+                100%{background-color: purple; border: 10px gold solid;}
+            }
+            .first_div{
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                border-radius: 20px;
+                background-color: blue;
+                animation: move 3s infinite ease-in-out;
+            }
+            .second_div{
+                width: 170px;
+                height: 170px;
+                margin: 10px;
+                border-radius: 85px;
+                background-color:salmon;
+            }
+            .third_div{
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                border: 10px gold solid;
+                border-radius: 20px;
+                background-color: purple
+            }
+            .main:hover .second_div{
+                animation: change_radius 4s infinite ease-in-out;
+            }
+            .main:hover .third_div{
+                animation: change_color 3s infinite ease-in-out;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="first_div"></div>
+            <div class="second_div"></div>
+            <div class="third_div"></div>
+        </div>
+    </body>
+</html>

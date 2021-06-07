@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>Движение по кривой линии</title>
+        <style type="text/css">
+        #img {
+            width: 250px;
+            height: 250px;
+        }
+        </style>
+    </head>
+    
+    <script>
+var X = 0, Y = 0;
+
+var A1, A2, A3, A4;
+var B1, B2, B3, B4;
+
+function A1()
+{
+    A1 = setInterval("firstMove()", 5);
+}
+function firstMove()
+{
+    var img = document.getElementById("img");
+    if(X > 250)
+    {
+        clearInterval(A1);
+        A2 = setInterval("secondMove()", 5);
+    }
+    else
+    {
+        X += 1.8;
+        Y += 1.8;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+function secondMove()
+{
+    var img = document.getElementById("img");
+    if(X > 600)
+    {
+        clearInterval(A2);
+        A3 = setInterval("thirdMove()", 1);
+    }
+    else
+    {
+        X += 2;
+        Y -= 1.7;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+function thirdMove()
+{
+    var img = document.getElementById("img");
+    if(X > 900)
+    {
+        clearInterval(A3);
+        A4 = setInterval("fourthMove()", 1);
+    }
+    else
+    {
+        X++;
+        Y += 1.7;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+
+function fourthMove()
+{
+    var img = document.getElementById("img");
+    if(X > 1200)
+    {
+        clearInterval(A4);
+        B1 = setInterval("firstBackMove()", 1);
+    }
+    else
+    {
+        X++;
+        Y -= 1;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+function firstBackMove()
+{
+    var img = document.getElementById("img");
+    if(X < 900)
+    {
+        clearInterval(B1);
+        B2 = setInterval("secondBackMove()", 1);
+    }
+    else
+    {
+        X --;
+        Y -= 0.5;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+function secondBackMove()
+{
+    var img = document.getElementById("img");
+    if(X < 600)
+    {
+        clearInterval(B2);
+        B3 = setInterval("thirdBackMove()", 1);
+    }
+    else
+    {
+        X--;
+        Y += 1.6;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+function thirdBackMove()
+{
+    var img = document.getElementById("img");
+    if(X < 200)
+    {
+        clearInterval(B3);
+        B4 = setInterval("fourthBackMove()", 1);
+    }
+    else
+    {
+        X--;
+        Y -= 1.25;
+        img.style.marginLeft = X + "px";
+        img.style.marginTop = Y + "px";        
+    }
+}
+
+
+function fourthBackMove()
+{
+    var img = document.getElementById("img");
+    if(X < 0)
+    {
+        clearInterval(B4);
+    }
+    else
+    {
+        X--;
+        img.style.marginLeft = X + "px";
+    }
+}
+
+    </script>
+<body>
+    <img id="img" src="s375.png" onclick = "A1()" onclick="B1()">
+    </body>
+</html>

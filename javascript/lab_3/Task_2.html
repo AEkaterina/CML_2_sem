@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Задание 2</title>
+        <script type="text/javascript">
+           let arr = new Array("pow", "pop", "push", "shift", "round", "floor", "slice", "sort");
+            document.write("Исходный массив: ");
+            for(let i = 0; i < arr.length; i++){
+                document.write(arr[i] + " ");
+            }
+            document.write("<br>" + "Длина: " + arr.length + "<br>");
+            
+            let arr_math = new Array()
+            arr_math = arr.slice(4,6);
+            arr_math.unshift(arr[0]);
+            document.write("Массив с элементами Math: ");
+            for(let i= 0; i < arr_math.length; i++) {
+                document.write(arr_math[i] + " ");
+            }
+            document.write("<br>" + "Длина: " + arr_math.length + "<br>");
+            
+            let arr_array = new Array;
+            arr_array = arr.slice(1,4);
+            arr_array.push(arr[6], arr[7]);
+            document.write("Массив с элементами Array: ");
+            for(let i = 0; i < arr_array.length; i++){
+                document.write(arr_array[i] + " ");
+            }
+            document.write("<br>" + "Длина: " + arr_array.length + "<br>");
+
+            arr_math.unshift("sqr");
+            document.write(arr_math + "<br>" + "Длина: " + arr_math.length + "<br>");
+            arr_array.push("comcat");
+            document.write(arr_array + "<br>" + "Длина: " + arr_array.length);            
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

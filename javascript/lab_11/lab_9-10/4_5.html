@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Графики</title>
+    <style type='text/css'>
+        fieldset {
+            width: 450px;
+        }
+        label {
+            font-family: arial,sans-serif;
+            font-size: 20px;
+        }        
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <label>График:</label><br/>
+        <input type = 'radio' name = 'graph' value = '-Math.pow(x,2) * 0.2' /> y = x<sup>2</sup><br/>
+        <input type = 'radio' name = 'graph' value = '-Math.pow(x,3) * 0.1' /> y = x<sup>3</sup><br/>
+        <input type = 'radio' name = 'graph' value = 'Math.sin(x) * 2' /> y = sin(x)<br/>
+        <input type = 'radio' name = 'graph' value = 'Math.cos(x) * 2' /> y = cos(x)<br/><br/>
+        <label>Цвет графика: </label>
+            <select>
+                <option value = 'Black'>Черный</option>
+                <option value = 'Red'>Красный</option>
+                <option value = 'Blue'>Синий</option>
+                <option value = 'Yellow'>Желтый</option>
+                <option value = 'Green'>Зеленый</option>
+                <option value = 'Purple'>Фиолетовый</option>
+            </select>
+        </fieldset>
+    </form>
+    <canvas width="500px" height="400" id="draw_f" style="margin-left: 400px;"></canvas>
+    <script type="text/javascript">	        
+        $(document).ready(function(){
+            $('#draw_f')[0].getContext('2d').translate($('#draw_f')[0].width / 2, $('#draw_f')[0].height / 2);	
+            $("form input").click(function(){
+                var graph = $(this).val(), canvas = $('#draw_f')[0], c = canvas.getContext('2d');
+                c.fillStyle = $('select').val();
+                c.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+                
+                for(var x = -20; x < 20; x += 0.005){
+                    var y = eval(graph) * 5;
+                    c.beginPath();  
+                    c.arc(x * 8, y, 1, 0, Math.PI*2, false);
+                    c.fill();  
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 8</title>
+        <style type="text/css">
+        #p_1{
+            font-family: 'Trebuchet MS';
+            font-size: 25px;
+        }
+
+        #p_2{
+            font-family: Tahoma;
+            font-size: 25px;
+        }
+
+        #p_4{
+            font-family: 'Courier New';
+            font-size: 25px;
+        }
+
+        .p_6{
+            font-family: 'Times New Roman';
+            font-size: 20px;
+        }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        let flag = false;
+            
+        // 1
+
+            document.write("<h2 align = \"center\">Задание 1</h2>");
+            document.write("<p id = \"p_1\" class = \"color\" align = \"center\">Изменить цвет на красный</p>");
+            $(".color").mouseover(function(){
+                $(this).css("color","red");
+            });
+            $(".color").mouseout(function(){
+                $(this).css("color","black");
+            });
+
+        // 2
+            document.write("<h2 align = \"center\">Задание 2</h2>");
+            document.write("<p id = \"p_2\" class  = 'size' align = \"center\">Размер шрифта: 15pt</p>")
+            $(".size").click(function(){
+               $(this).css("font-size", "15px");
+            });
+            
+            // 3 
+            document.write("<h2 align = \"center\">Задание 3</h2>");
+            document.write("<img style=\"margin:10px 30px 30px 500px;height:25%;width:25%;\" class = \"change_img\" src=\"_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg\">");
+            $(".change_img").click(function() {
+                if($(this).attr("src") == "_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg")
+                    src = "2165035.jpg";
+                else
+                    src = "_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg";
+                $(this).attr("src",src);
+            });
+            
+            // 4
+
+            document.write("<h2 align = \"center\">Задание 4</h2>")
+            document.write("<p id = \"p_4\" align = \"center\" class = 'text_to_img'>Tекст -> изображение</p>")
+            var a = 0;
+            $(".text_to_img").click(function(){
+                switch(a){
+                    case 0: $(".text_to_img").html("<img src = '_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg' style = 'height:25%;width:25%;'>"); a++; break;
+                    case 1: $(".text_to_img").html("<p id = \"p_4\" align = \"center\" class = 'text_to_img'>Tекст -> изображение</p>"); a = 0; break;
+                }
+            });
+            
+            // 5
+
+            document.write("<h2 align = \"center\">Задание 5</h2>");
+            document.write("<img style=\"margin: 10px 30px 30px 500px;width: 250px;\" src = '2165035.jpg'>");
+            $("[src = '2165035.jpg']").mouseover(function(){
+                $(this).css("width","400px");
+            });
+            $("[src = '2165035.jpg']").mouseout(function(){
+                $(this).css("width","250px");
+            });
+                             
+
+            // 6
+
+            document.write("<h2 align = \"center\">Задание 6</h2>");
+            document.write("<p class = \"p_6\" style = \"text-align: center;\">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>");
+            $("p").dblclick(function(){
+                $(this).css("border", "5px double crimson");
+            });
+            $("p").click(function(){
+                $(this).css("border", "none");
+            });
+            document.write("<p class = \"p_6\" style = \"text-align: center;\">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac placerat justo. Sed nec aliquam ante.</p>");
+            $("p").dblclick(function(){
+                $(this).css("border", "5px double crimson");
+            });
+            $("p").click(function(){
+                $(this).css("border", "none");
+            });
+            
+        </script>
+    </body>
+</html>

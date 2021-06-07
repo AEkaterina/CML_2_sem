@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Движение по кривой линии</title>
+    </head>
+    <img id="img" src="584c55a0ef86d158ea2e7cd5.png" style = "position: absolute; width: 250px; height: 290px;">        
+    <script type="text/javascript">
+    var A1, A2;
+    function curvemove(xid, yexpr, xexpr, ztime) {      //xid - id движ объекта, yexpr - выраж для вертик коорд, xexpr - для гориз, ztime - интеркал между выз ф-ции
+        if(!xid) return null;
+        if(!ztime) ztime = 100;
+        x = 0;
+        A1 = setInterval(move, ztime, xid, xexpr, yexpr)
+    }
+
+    function move(xid, yexpr, xexpr) {
+        if(x>600)
+        {
+            clearInterval(A1);
+            A2 = setInterval(move_back, 10, xid, yexpr, xexpr);
+        }
+        else { 
+        x++;
+        document.all[xid].style.top = eval(yexpr);
+        document.all[xid].style.left = eval(xexpr);
+        }
+    }
+    function move_back(xid,yexpr,xexpr){
+        if(x<0){
+            clearInterval(A2);
+        }
+        else {
+            x--;
+            document.all[xid].style.top = eval(yexpr);
+            document.all[xid].style.left = eval(xexpr);
+        }
+    }
+    curvemove('img' , "x + 100" , "Math.sin(0.03*x)*120 + 50", 10)
+</script>    
+</html>

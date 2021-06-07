@@ -1,0 +1,16 @@
+<?xml version = "1.0"?>
+
+<xs:schema "http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "speciality">
+        <xs:element name = "university">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "name" type = "xs:string"/>
+                    <xs:element name = "score" type = "xs:string"/>
+                    <xs:element name = "plan" type = "xs:string"/>
+                    <xs:element name = "city" type = "xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:element>
+</xs:schema>

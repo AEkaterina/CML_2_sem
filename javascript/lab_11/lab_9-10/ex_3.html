@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Движение по кривой линии</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script type="text/javascript" src = "jquery.easing.compatibility.js"></script>
+    </head>
+    <body>
+    <img id="img" class="animation" src="s375.png" onclick="move()" style = "margin-top: 80px; position: absolute; width: 250px; height: 250px;">        
+    
+    <script type="text/javascript">
+    
+    var dx = 0;
+    var dy = 0;
+    
+    function move() {
+        
+        for (var x = 800; x > 8; x -= 10){
+            dx = x;
+            dy = Math.sin(0.03 * x) * 120; 
+            $(".animation").animate({left: dx + 'px', top: dy + 'px'}, 200);
+        }
+         
+    }
+    
+  
+</script>  
+</body>  
+</html>

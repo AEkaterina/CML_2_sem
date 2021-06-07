@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Задание 1</title>
+        <style type="text/css">
+            .button{
+                text-align: center;
+                background-color: wheat;
+                border-radius: 10px;
+                height: 50px;
+                width: 110px;
+                font-family: 'Times New Roman';
+                font-size: 16pt;
+            }
+            #results{
+                color: darkmagenta;
+                font-family: 'Times New Roman';
+                font-size: 15pt;
+                margin: 50px;
+            }            
+        </style>
+        <script type='text/javascript'>
+        function task_1() {
+            alert('Вас приветствует учебный центр');
+            x=prompt('Введите Ваше имя:', 'Имя');
+            alert('Добро пожаловать на наши курсы,'+ x);
+            if(confirm('Хотите стать Web-дизайнером?'))
+                alert('Учите стили CSS и JavaScript');
+            else
+                alert('Упускаете время!');
+        }
+        function task_2() {
+            document.getElementById('results').innerHTML = "10 + 5 = "+ (10 + 5);
+            document.getElementById('results').innerHTML += "<br>\"10\" + \"5\" = "+("10"+"5");
+            document.getElementById('results').innerHTML += "<br>22 + \"5\" = "+(22+"5");
+            document.getElementById('results').innerHTML += "<br>\"22\" + 5 = "+("22"+5);
+            alert('Результатом сложения строки и числа будет строка')
+        }
+        function task_3() {
+            x = prompt("Введите x: ", "x") 
+            y = prompt("Введите y: ", "y")
+            first=(35 * y - 25 * x) / 5 + 232;
+            second=(8 * y / x + 5 * x / y - 43) * 6;
+            ost = first % second;  
+            document.getElementById('results').innerHTML = "(35y-25x)/5+232="+first;
+            document.getElementById('results').innerHTML += "<br>(8*y/x+5*x/y-43)*6="+second;
+            document.getElementById('results').innerHTML += "<br>Остаток от деления первого выражения на второе: "+ost;
+        }
+        function task_4(){
+            x = parseInt(prompt("Введите первое число: ", "Число"));
+            y = parseInt(prompt("Введите второе число", "Число"));
+            if ((x < 20 || x > 40) && (x != 15 && x % 5 == 0)) document.getElementById('results').innerHTML = "Правильное значение";
+            else document.getElementById('results').innerHTML = "Не правильное значение";
+            if (x < y) document.getElementById('results').innerHTML += "<br>Сумма чисел равна: " + (x + y);
+            else document.getElementById('results').innerHTML = "<br>Остаток от деления первого числа на второе равен "  (x % y);
+            alert('\nРезультат вычисления 1 выражения равно: ' + first + '\nРезультат второго - ' + second + '\nОстаток от деления: ' + ost)   
+        }
+        function task_5(){
+            num_1 = prompt("Введите первое число", "Число");
+            num_2 = prompt("Введите второе число", "Число");
+            if (num_1 > num_2) document.getElementById('results').innerHTML = "Первое число больше второго<br>";
+            else if(num_1 < num_2) document.getElementById('results').innerHTML = "Второе число больше первого<br>";
+            else document.getElementById('results').innerHTML = "Числа равны<br>";
+            num_3 = prompt("Введите третье число", "Число");
+            (num_3 % 2 == 0) ? document.getElementById('results').innerHTML += "Число четное" : document.getElementById('results').innerHTML += "Число нечетное"; 
+        }
+    function task_6(){
+        let d = new Date();
+        let day=d.getDay();
+        switch (day) {
+            case 1:
+                document.getElementById('results').innerHTML = "Сегодня Понедельник";
+                break;
+            case 2:
+                document.getElementById('results').innerHTML = "Сегодня Вторник";
+                break;
+            case 3:
+                document.getElementById('results').innerHTML = "Сегодня Среда";
+                break;
+            case 4:
+                document.getElementById('results').innerHTML = "Сегодня Четверг";
+                break;
+            case 5:
+                document.getElementById('results').innerHTML = "Сегодня Пятница";
+                break;
+            case 6:
+                document.getElementById('results').innerHTML = "Сегодня Суббота";
+                break;
+                case 0:
+                document.getElementById('results').innerHTML = "Сегодня Воскресенье";
+                break;
+            default:
+        }
+        
+        
+    }
+    function task_7(){
+        try {
+                x     //переменная не определена!
+                let y = 5;
+                let res;
+                res = x + y;
+            } 
+            catch(err) {
+                alert(err); 
+            }
+    }
+        </script>
+    </head>
+    <body>
+        <input type='button' class="button" value='Задание 1' onclick='task_1()' /> 
+        <input type='button' class="button" value='Задание 2' onclick='task_2()' />
+        <input type='button' class="button" value='Задание 3' onclick='task_3()' /> 
+        <input type='button' class="button" value='Задание 4' onclick='task_4()' />
+        <input type='button' class="button" value='Задание 5' onclick='task_5()' /> 
+        <input type='button' class="button" value='Задание 6' onclick='task_6()' />  
+        <input type='button' class="button" value='Задание 7' onclick='task_7()' /> 
+        <div id="results">
+        </div>
+    </body>
+</html>

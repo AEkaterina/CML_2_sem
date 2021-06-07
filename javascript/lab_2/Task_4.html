@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Задание 4</title>
+        <style type="text/css">
+        table{
+            border-collapse: collapse;
+            border:2px solid black;
+            font-family: 'Times New Roman';
+            font-size: 15pt;
+            background:snow;
+            margin: 15px;
+        }
+        td{
+            text-align: center;
+            padding: 15px;
+            border: solid black 1px;
+        }
+        table tr:first-child td:nth-child(1n){
+            background:crimson;
+            color: white;
+        }
+        table tr:nth-child(1n) td:nth-child(3){
+            background: crimson;
+            color: white;
+        }
+
+
+
+        
+        </style>
+        <script type='text/javascript'>
+        num1 = new Number(139);
+        num2 = new Number(57.38731)
+        document.write('<table>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "Число" + '</td>' + '<td>' + "Метод" + '</td>' + '<td>' + "Результат" + '</td>' + '<td>' + "Описание метода" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "139" + '</td>' + '<td>' + "toExponential(4)" + '</td>' + '<td>' + num1.toExponential(4) + '</td>' + '<td>' + "Представляет число в экспоненциальной форме с 4-мя цифрами после запятой" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "139" + '</td>' + '<td>' + "toFixed(3)" + '</td>' + '<td>' + num1.toFixed(3) + '</td>' + '<td>' + "Представляет число в форме с 3-мя фиксированными цифрами после точки" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "139" + '</td>' + '<td>' + "toPrecision(5)" + '</td>' + '<td>' + num1.toPrecision(5) + '</td>' + '<td>' + "Представляет число с общим количеством значащих цифр, равных 5" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "139" + '</td>' + '<td>' + "toString(8)" + '</td>' + '<td>' + num1.toString(8) + '</td>' + '<td>' + "Возвращает строковое представление числа в 8-ричной системе счисления" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "57.38731" + '</td>' + '<td>' + "toExponential(3)" + '</td>' + '<td>' + num2.toExponential(3) + '</td>' + '<td>' + "Представляет число в экспоненциальной форме с 4 цифрами после запятой" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "57.38731" + '</td>' + '<td>' + "toFixed(3)" + '</td>' + '<td>' + num2.toFixed(3) + '</td>' + '<td>' + "Представляет число в форме с 3-мя фиксированными цифрами после точки" + '</td>');
+        document.write('</tr>');
+
+        document.write('<tr>');
+        document.write('<td>' + "57.38731" + '</td>' + '<td>' + "toPrecision(5)" + '</td>' + '<td>' + num2.toPrecision(5) + '</td>' + '<td>' + "Представляет число с общим количеством значащих цифр, равных 5" + '</td>');
+        document.write('</tr>');
+        
+        document.write('<tr>');
+        document.write('<td>' + "57.38731" + '</td>' + '<td>' + "toString(8)" + '</td>' + '<td>' + num2.toString(8) + '</td>' + '<td>' + "Возвращает строковое представление числа в 8-ричной системе счисления" + '</td>');
+        document.write('</tr>');
+        
+        
+        document.write('</table>');
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Перемещение картинки</title>
+    <style type='text/css'>
+        #img {
+            position: absolute;
+            margin-left: 500px;
+            margin-top: 100px;
+            width: 250px;
+            height: 230px;
+        }
+        #text {
+            margin: 0;
+            font-family: 'Times New Roman';
+            position: absolute;
+            font-size: 30px;
+            color: darkblue;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+</head>
+
+<body>			
+        <img id="img" src="584c54bfad042158ea2b0cdd.png">
+        <p id="text">Перетащите этот текст</p>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#img").draggable();
+        });
+        
+        $(document).ready(function(){
+            $("#text").mousedown(function(){
+                $("#text").draggable();
+                });
+            });            
+    </script>
+</body>

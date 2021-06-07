@@ -1,0 +1,146 @@
+<HTML>
+    <HEAD>
+    <title>Моя первая страница</title>
+    </HEAD>
+    <script>
+        function task_1(){
+            for(let i = 0; i < document.all.length; i++){
+                alert((i + 1) + ": " + document.all[i].tagName + " " + document.all[i].nodeType);
+                console.log((i + 1) + ": " + document.all[i].tagName + " " + document.all[i].nodeType);
+            }
+        }
+
+        function task_2(){
+            for(let i = 0; i < document.body.children.length; i++) {
+                alert((i + 1) + ": " + document.body.children[i].tagName);
+                console.log((i + 1) + ": " + document.body.children[i].tagName);
+            }
+        }
+        
+        function task_3_1(){
+            try {
+            for(let i = 0; i < document.all.length; i++){
+                if(document.all[i] instanceof HTMLSpanElement){
+                    alert(document.all[i].innerHTML);
+                    break;
+                }
+                
+            }            
+            } catch (err) {
+                alert(err);
+            }
+        }
+        
+        function task_3_2(){
+            alert(document.getElementsByTagName('span')[0].innerHTML);
+        }
+
+        function task_3_3(){
+            alert(document.getElementById('tut').innerHTML);
+        }
+
+        function task_4(){
+            try{
+            let table = document.getElementsByTagName('table')[0];
+            let c = 2;
+            let sum = 0;
+            for(let i = 3; i < table.rows.length; i++){
+                sum += parseInt(table.rows[i].cells[c].innerHTML);
+            }
+            let av = sum / 5;
+            alert("Средний балл равен " + av);
+            document.getElementsByTagName('span')[1].innerHTML += " " + av;
+            } catch(err) {
+                alert(err);
+            }
+        }
+
+        </script>
+        
+    <BODY>
+    <H1 align = "center">Я, <a href="lab_1_2.html">Астапкина Екатерина Васильевна</a>, изучаю <font color="red"> HTML </font> и CSS
+    <h2 align = "center">Язык разметки гипертекста</h2>
+    <h3>Общее представление</h3>
+        <p>
+    <span id="tut"><font color = "red">Язык</font></span> гипертекстовой разметки HTML был разработан британским учёным <span style = "color: red;">Тимом Бернерсом-Ли</span> приблизительно в 1986—1991 годах в стенах ЦЕРНа в Женеве в Швейцарии[3]. <span>HTML</span> создавался как язык для обмена научной и технической документацией, пригодный для использования людьми, не являющимися специалистами в области вёрстки. HTML <span>успешно</span> справлялся с проблемой сложности <span><font color = "red">SGML</font></span> путём определения небольшого набора структурных и семантических элементов — дескрипторов.
+            </p>
+    <h3>Структура HTML-документа</h3>
+        <p>
+    <span>HTML</span> — теговый язык разметки документов. Любой документ на языке HTML представляет собой <span><font color = "green">набор</font></span> элементов, причём начало и конец каждого элемента обозначается специальными пометками — <span>тегами</span>. Элементы могут быть пустыми, то есть не содержащими никакого текста и других данных. В этом случае обычно <span><font color = "green">не указывается</font></span> закрывающий тег (например, тег переноса строки br — одиночный и закрывать его не нужно) . 
+        </p>
+    <h3>Перспективы</h3>
+        <p>
+    В настоящее время <span><font color = "blue">Консорциум Всемирной паутины</font></span> разработал HTML версии 5. Черновой вариант спецификации языка появился в Интернете 20 ноября 2007 года.
+    Сообществом <span><font color = "blue">WHATWG</font></span>(англ. Web Hypertext Application Technology Working Group), начиная с 2004 года[24], разрабатывается спецификация <span>Web Applications 1.0</span>, часто неофициально называемая «HTML 5», которая расширяет HTML (впрочем, имея и совместимый с XHTML 1.0 XML-синтаксис) для лучшего представления семантики различных типичных страниц, например <span>форумов</span>, сайтов аукционов, поисковых систем, онлайн-магазинов и т. д., которые не очень удачно вписываются в модель <span>XHTML 2.0</span>.
+        </p>
+    
+    <h2 align="center">Работа с текстом</h2>
+    <ol>
+        <li>Цвет</li>
+            <ul type="disc">
+                <li>Красный</li>
+                <li>Синий</li>
+            </ul>
+        <li>Расположение</li>
+            <ul type ="square">
+                <li>По центру</li>
+                <li>Слева</li>
+                <li>Справа</li>
+            </ul>
+        <li>Форматирование</li>		
+            <ul type="circle">
+            <li>Наклон</li>
+            <li>Стиль</li>
+            </ul>	
+    </ol>
+    
+    <h2 align="center">Результаты сессии</h2>
+    <table border="1px" width="100%">
+        <tr>
+            <th>ФИО</th>
+            <th colspan="3"><a id="a2" href="lab_1_2.html">Астапкина Екатерина Васильевна</a></th>
+        </tr>
+        <tr>
+            <th><img src="_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg" height="80" width="100" alt="Мое фото"></th>
+            <th colspan="3">Адрес: Логойский тракт, д.25, кв. 374</th>
+        </tr>
+        <tr>
+            <th rowspan="6">1 семестр 2019/2020 уч. года</th>
+            <th>Дата</th>
+            <th>Предмет</th>
+            <th>Оценка</th>
+        </tr>
+        <tr>
+            <th>31.12.2019</th>
+            <th>ОАиП</th>
+            <th>6</th>
+        </tr>
+        <tr>
+            <th>05.01.2020</th>
+            <th>Физика</th>
+            <th>7</th>
+        </tr>
+        <tr>
+            <th>11.01.2020</th>
+            <th>ОИТ</th>
+            <th>7</th>
+        </tr>
+        <tr>
+            <th>16.01.2020</th>
+            <th>Математика</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>22.01.2020</th>
+            <th>АЛОЦВМ</th>
+            <th>6</th>
+        </tr>
+    </table>
+    <input type="button" value="Задание 1" onclick="task_1()" />
+    <input type="button" value="Задание 2" onclick="task_2()" />
+    <input type="button" value="Задание 3 (all)" onclick="task_3_1()" />
+    <input type="button" value="Задание 3 (span)" onclick="task_3_2()" />
+    <input type="button" value="Задание 3 (id)" onclick="task_3_3()" />
+    <input type="button" value="Задание 4" onclick="task_4()" />
+    </BODY>
+    </HTML>

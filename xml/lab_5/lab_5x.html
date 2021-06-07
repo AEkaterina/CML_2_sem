@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>5</title>
+    </head>
+
+    <body>
+        <div>
+            <strong>Фамилия и имя: </strong><span id="name"></span><br>
+            <strong>Дата рождения: </strong><span id="date"></span><br>
+            <strong>Средний балл: </strong><span id="mark"></span>
+        </div>
+
+        <script>
+            var xml;
+            var parser;
+            var doc;
+
+            function processFiles(files) { // После загрузки файла
+            var file = files[0];
+            var reader = new FileReader(); // Читаем файл
+            reader.onload = function (e) {
+                xml = e.target.result; // Записываем в переменную содержимое файла // Совершаем действия над строкой xml
+                parser = new DOMParser();
+                doc = parser.parseFromString(xml, "text/xml");
+                document.getElementById("name").innerHTML = doc.getElementsByTagName("name")[0].innerHTML;
+                document.getElementById("date").innerHTML = doc.getElementsByTagName("date")[0].innerHTML;
+                document.getElementById("mark").innerHTML = doc.getElementsByTagName("mark")[0].innerHTML;
+            }           
+            reader.readAsText(file); // Указываем, что данный файл предназначен для чтения текста
+            }
+        </script>
+
+        <input type="file" onchange="processFiles(this.files)">
+    </body>
+</html>

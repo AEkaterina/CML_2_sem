@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Menu</title>
+        <style type="text/css">
+            ul {
+                list-style: none;   /*убрать маркеры списка*/
+                margin: 0;          /*убрать отступы*/
+                padding-left: 0;    /*убрать отступы*/
+                margin-top: 25px;   /*отступ сверху*/
+            }                
+            .menu a:hover {
+                color: red;
+            }
+            a {
+                display: block;
+                text-decoration: none;     /*без подчеркивания текста ссылок*/
+                color: black;             /*цвет ссылок*/  
+                padding: 10px;             /*отступ*/
+                font-family: Arial;        /*шрифт*/
+                border-radius: 4px;        /*скругление*/
+            }
+            
+            .menu li {                            /*меню горизонтальное*/
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .menu li {                      /*красные разделители*/
+                border-left: 3px solid red;                    
+            }
+            .menu li:first-child{
+                border: none;
+            }
+            .menu li+li{
+                border-left: 3px solid red;
+            }
+                
+            td+td {
+                border-left: red 5px solid;
+            }
+            .t_menu a:hover{
+                color: red;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <p>Списком</p>
+        <div class="menu">
+        <ul id="menu">
+            <li><a href="#">Первая ссылка</a></li>
+            <li><a href="#">Вторая ссылка</a></li>
+            <li><a href="#">Третья ссылка</a></li>
+            <li><a href="#">Четвертая ссылка</a></li>
+        </ul>
+        </div>
+        <p>Таблицей</p>
+        <div class="t_menu">
+        <table>
+            <tr>
+                <td><a href="#">Первая ссылка</a></td>
+                <td><a href="#">Вторая ссылка</a></td>
+                <td><a href="#">Третья ссылка</a></td>
+                <td><a href="#">Четвертая ссылка</a></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>

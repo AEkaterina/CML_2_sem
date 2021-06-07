@@ -1,0 +1,19 @@
+.box{
+    width: 2000px;
+    height: 1000px;
+}
+
+.circle {
+    fill: DarkViolet;
+    fill-opacity: 70%;
+    stroke: indigo; 
+    stroke-width: 3; 
+    transform: skewX(30deg);
+}
+
+.rect {
+    fill: purple;
+    stroke: indigo;
+    stroke-width: 4;
+    transform: scale(1.5) skewX(40deg);
+}

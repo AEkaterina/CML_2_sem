@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Задание 1</title>
+        <script type="text/javascript">
+        function Group(num, spec, quantity, course){
+            this.num = num;
+            this.spec = spec;
+            this.quantity = quantity;
+            this.course = course;
+            this.add_stud = function add_stud(k){
+                this.quantity += k;
+                document.write("В группу " + num + " добавили " + k + " студентов<br>");
+            }
+            this.sub_stud = function sub_stud(m){
+                this.quantity -= m;
+                document.write("Из группы " + num + " исключили  " + m + " студентов<br>");
+            }
+        }
+        gr1 = new Group(1, "Исит", 28, 1);
+        document.write("Группа номер " + gr1.num + ", специальность " + gr1.spec + ", количество студентов " + gr1.quantity + ", курс " + gr1.course + "<br>");
+        gr1.add_stud(2);
+        gr1.sub_stud(3);
+        document.write("В группе номер " + gr1.num + " специальности " + gr1.spec + " " + gr1.quantity + " студентов<br><br>");
+
+        gr2 = new Group(3, "ПОИТ", 31, 2);
+        document.write("Группа номер " + gr2.num + ", специальность " + gr2.spec + ", количество студентов " + gr2.quantity + ", курс " + gr2.course + "<br>");
+        gr2.add_stud(1);
+        gr2.sub_stud(5);
+        document.write("В группе номер " + gr2.num + " специальности " + gr2.spec + " " + gr2.quantity + " студентов<br><br>");
+
+        gr3 = new Group(9, "ДЭиВИ", 19, 3);
+        document.write("Группа номер " + gr3.num + ", специальность " + gr3.spec + ", количество студентов " + gr3.quantity + ", курс " + gr3.course + "<br>");
+        gr3.add_stud(5);
+        gr3.sub_stud(3);
+        document.write("В группе номер " + gr3.num + " специальности " + gr3.spec + " " + gr3.quantity + " студентов<br><br>");
+
+        gr4 = new Group(6, "ПОИБМС", 25, 2);
+        document.write("Группа номер " + gr4.num + ", специальность " + gr4.spec + ", количество студентов " + gr4.quantity + ", курс " + gr4.course + "<br>");
+        gr4.add_stud(4);
+        gr4.sub_stud(7);
+        document.write("В группе номер " + gr4.num + " специальности " + gr4.spec + " " + gr4.quantity + " студентов<br>");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

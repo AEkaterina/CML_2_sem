@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Задание 2</title>
+        <script type="text/javascript">
+        function Student(name, surname, fiz, math, inf){
+            this.name = name;
+            this.surname = surname;
+            this.fiz = fiz;
+            this.math = math;
+            this.inf = inf;
+            this.print_name = function print_name(n, s){
+                alert(n + " " + s);
+            }
+            this.av_mark = function av_mark(f, m, i){
+                let mark = 0;
+                mark = (f + m + i) / 3;
+                document.write("Средний балл равен " + mark.toFixed(3) + "<br>"); 
+            }
+        }
+        st1 = new Student ("Екатерина", "Астапкина", 8, 8, 6);
+        document.write("Имя студента " + st1.name + " " + st1.surname + "<br>Оценка по физике " + st1.fiz + "<br>по математике " + st1.math + "<br>по информатике " + st1.inf + "<br>");
+        st1.print_name(st1.name, st1.surname);
+        st1.av_mark(st1.fiz, st1.math, st1.inf);
+        document.write("<br>");
+
+        st2 = new Student ("Александрова", "Анастасия", 7, 8, 9);
+        document.write("Имя студента " + st2.name + " " + st2.surname + "<br>Оценка по физике " + st2.fiz + "<br>по математике " + st2.math + "<br>по информатике " + st2.inf + "<br>");
+        st2.print_name(st2.name, st2.surname);
+        st2.av_mark(st2.fiz, st2.math, st2.inf);
+        document.write("<br>");
+
+        st3 = new Student ("Володина", "Ангелина", 5, 7, 8);
+        document.write("Имя студента " + st3.name + " " + st3.surname + "<br>Оценка по физике " + st3.fiz + "<br>по математике " + st3.math + "<br>по информатике " + st3.inf + "<br>");
+        st3.print_name(st3.name, st3.surname);
+        st3.av_mark(st3.fiz, st3.math, st3.inf);
+        document.write("<br>");
+
+        Student.prototype.course = this.course;
+        st1.course = 1;
+        st2.course = 4;
+        st3.course = 2;
+
+        document.write("Студент " + st1.surname + " " + st1.name + " учится на " + st1.course + " курсе<br>");
+        document.write("Студент " + st2.surname + " " + st2.name + " учится на " + st2.course + " курсе<br>");
+        document.write("Студент " + st3.surname + " " + st3.name + " учится на " + st3.course + " курсе<br>");
+
+        </script>
+    </head>
+    <body>        
+    </body>
+</html>

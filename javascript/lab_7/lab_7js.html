@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>lab 7</title>
+<body>
+
+    <script type="text/javascript">
+    function print() {
+        elems = document.forms.data.elements;
+        document.write("<b>" + "Факультет информационных технологий" + "</b>");
+        let text = "<p> Студент " + elems.lastname.value + " специальности " + elems.spec.value + " курса ";
+        text += elems.course.value + " должен сдавать следующие предметы:<br>";
+        text += "<ul>";
+        for (i = 0; i < elems.subject.length; i++) {
+            if (elems.subject[i].checked == true) {
+                text += "<li>" + elems.subject[i].value + "</li>";
+            }
+        }
+        text += "</ul>"
+        document.write(text);
+        console.log(elems);
+        console.log(text);
+    }
+
+    </script>
+    
+    <form name="data">
+        <b>Факультет информационных технологий</b><br><br>
+        <input type="text" name="lastname" value="Фамилия"><br>
+        <input type="text" name="name" value="Имя"><br><br>
+        <b>Специальность: </b>
+        <select name="spec">
+            <option>ПОИТ</option>
+            <option>ИСиТ</option>
+            <option>ПОИБМС</option>
+            <option>ДЭиВИ</option>
+        </select>
+        <p><b>Курс:</b></p>
+        <input type="radio" name="course" value="1">1
+        <input type="radio" name="course" value="2">2
+        <input type="radio" name="course" value="3">3
+        <input type="radio" name="course" value="4">4
+        <p><b>Предметы:</b></p>
+        <input type="checkbox" name="subject" value="ОИТ">ОИТ
+        <input type="checkbox" name="subject" value="ОАП">ОАП
+        <input type="checkbox" name="subject" value="История">История
+        <input type="checkbox" name="subject" value="Физика">Физика
+        <input type="checkbox" name="subject" value="Математика">Математика
+        <br><br>
+        <input type="submit" name="data">
+        <input type="reset" name="data"><br><br>
+
+        <input type="button" value="Напечатать" onclick="print()">
+    </form>
+</body>
+
+</html>

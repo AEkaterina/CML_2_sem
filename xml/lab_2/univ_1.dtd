@@ -1,0 +1,8 @@
+<!DOCTYPE speciality [
+<!ELEMENT speciality (university)>
+<!ELEMENT university (name, score, plan, city)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT score (#PCDATA)>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+]>

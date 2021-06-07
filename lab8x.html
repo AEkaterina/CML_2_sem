@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex 1</title>        
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <svg width="800" height="1500">
+
+            <text x="20" y="40" class="text1">Какой-то текст</text>
+            <text x="250" y="80" class="text2" text-anchor="middle">Еще больше текста</text>
+            <text x="30" y="135" class="text3" transform="rotate(40, 100, 80)">Упражнние 1</text>
+            <text x="40" y="200" class="text4">Тут тоже написан<tspan dx="7" dy="8">текст</tspan></text> 
+
+            <defs>
+                <path id="Path" d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,
+                131.91,264,150c40.67,14.43,108.57-6.91,229-145"/>
+            </defs>
+
+            <text x="300">
+                <textPath xlink:href="#Path">
+                    Текст вдоль напрявляющей линии
+                </textPath>
+            </text>
+
+            <text x="40" y="400" class="text5">
+                <animate begin="click" attributeName="font-size" to="30px" dur="3s"/> Изменение размера текста
+            </text> 
+
+            <text x="40" y="350" class="text6">
+                <animate begin="click" attributeName="fill" values="red;orange;yellow;green;skyblue;purple" dur="3s"/>
+                <animateTransform begin="click" attributeName="transform" type="skewX" to="15" dur="2s"/>Изменение цвета текста
+            </text>
+
+            <text x="40" y="450" class="text7">
+                <animate begin="click" attributeName="letter-spacing" to="5px" dur="3s"/>
+                <animate begin="click" attributeName="stroke" values="orhid;orange;yellow;green;skyblue;purple" dur="5s"/>Изменение расстояния между букв в тексте
+            </text>
+
+        </svg>
+    </body>
+</html>

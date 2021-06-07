@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script type='text/javascript'>
+        x = prompt("Введите x: ", "x") 
+        y = prompt("Введите y: ", "y")
+        first=(35 * y - 25 * x) / 5 + 232;
+        second=(8 * y / x + 5 * x / y - 43) * 6;
+        ost = first % second;  
+        document.write("(35y-25x)/5+232=", first);
+        document.write("<br>(8*y/x+5*x/y-43)*6=", second);
+        document.write("<br>Остаток от деления первого выражения на второе: ", ost);
+        function result(){
+            alert('\nРезультат вычисления 1 выражения равно: ' + first + '\nРезультат второго - ' + second + '\nОстаток от деления: ' + ost)   
+        }
+        </script>
+    </head>
+    <body>
+        <br>
+        <input type='button' value='Результат' onclick='result()' /> 
+    </body>
+</html>

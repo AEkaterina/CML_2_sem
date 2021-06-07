@@ -1,0 +1,43 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+em {
+    font-weight: bold;
+    color: red;
+}
+
+fieldset {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid royalblue;
+    color: midnightblue;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin: 5px;
+    display: inline-block;
+}
+
+img {
+    width: 200px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+footer {
+    margin-left: 30px ;
+}
+
+figcaption {
+    margin-left: 67px;
+}

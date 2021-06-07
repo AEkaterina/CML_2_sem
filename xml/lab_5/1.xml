@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<information>
+    <student>
+        <name>Астапкина Екатерина</name>
+        <date>22.09.2000</date>
+        <mark>7.3</mark>
+    </student>
+
+    <student>
+        <name>Володина Ангелина</name>
+        <date>22.06.2001</date>
+        <mark>6.3</mark>
+    </student>
+ 
+</information>

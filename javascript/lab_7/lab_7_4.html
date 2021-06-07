@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание 4</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function print() {
+        let text = "";
+        text += "<p>Вы выбрали следующие предметы:</p>"
+        text += "<ul>";
+        let elems = document.forms.data.elements;
+        for (i = 0; i < elems.subject.length; i++) {
+            if (elems.subject[i].checked == true) {
+                text += "<li>" + elems.subject[i].value + "</li>";
+            }
+        }
+        text += "</ul>"
+        document.write(text);
+    }
+    </script>
+    <form name="data">
+        <b>Выберете предмет</b>
+        <br><br>
+        <input type="checkbox" name="subject" value="ОАП">ОАП<br>
+        <input type="checkbox" name="subject" value="ОИТ">ОИТ<br>
+        <input type="checkbox" name="subject" value="Математика">Математика<br>
+        <input type="checkbox" name="subject" value="Физика">Физика<br>
+        <input type="checkbox" name="subject" value="КЯР">КЯР<br>
+        <input type="checkbox" name="subject" value="История">История<br>
+        <input type="checkbox" name="subject" value="КСИС">КСИС<br>
+        <br>
+        <input type="submit" name="data">
+        <input type="reset" name="data">
+        <br><br>
+        <input type="button" value="Написать список" onclick="print()">
+    </form>
+</body>
+</html>

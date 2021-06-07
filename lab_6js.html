@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Lab_6</title>
+        <style type="text/css">
+            a {
+                text-decoration: none;
+                color: black;
+            }          
+            </style>            
+            
+        <script type="text/javascript">
+        let window1;
+        let window2;
+        function open_w(){
+            window1 = window.open("https://www.belstu.by/");
+        }
+
+        function close_w(){
+            window1.close();
+            }
+            
+        
+        function w_open_1(){
+            window1 = window.open("about:blank", "First Window", "width = 400, height = 200");
+         }
+
+        function w_edit_1(){
+            window1.document.write("This is the first window");
+        }
+
+        function w_close_1(){
+            window1.close();
+        }
+
+        function w_open_2(){
+            window2 = window.open("about:blank", "JavaScript", "width = 400 height = 200");
+        }
+
+        function w_edit_2(){
+            window1.document.write("Я изучаю JavaScript");
+        }
+
+        function w_close_2(){
+            window2.close();
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Задание 1</h2>
+        <div>
+        <input type="button" value="Open" onclick="open_w()" />
+        <input type="button" value="Close" onclick="close_w()" />
+        <br><br>
+        <input type="button" value="Open window 1" onclick="w_open_1()" />
+        <input type="button" value="Write in window 1" onclick="w_edit_1()" />
+        <input type="button" value="Close window 1" onclick="w_close_1()" />
+        <br><br>
+        <input type="button" value="Open window 2" onclick="w_open_2()" />
+        <input type="button" value="Write in window 2" onclick="w_edit_2()" />
+        <input type="button" value="Close window 2" onclick="w_close_2()" />
+        </div>
+        <h2> <a href="Task_2.html">Задание 2</a></h2>
+        
+
+    </body>
+</html>

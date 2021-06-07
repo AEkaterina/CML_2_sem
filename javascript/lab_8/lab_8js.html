@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 8</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2 align = "center">Задание 1</h2>
+        <div style="margin:30px 30px 10px 150px;font-size:15pt;">Цвета: <b><span id="red" onmouseover="color('red')">Красный</span>,<span id="green" onmouseover="color('green')">Зеленый</span>, <span id="blue" onmouseover="color('blue')">Синий</span>, <span id="yellow" onmouseover="color('yellow')">Желтый</span>, <span id="purple" onmouseover="color('purple')">Фиолетовый</span>, <span id="orange" onmouseover="color('orange')">Оранжевый</span>, <span id="lime" onmouseover="color('lime')">Светло-зеленый</span></b></div>
+        <h2 align = "center">Задание 2</h2>
+        <div style="margin: 30px 30px 10px 150px;">Размер шрифта: <b><span id = "10" onclick = "size(10)">10 pt</span>, <span id = "15" onclick = "size(15)">15 pt</span>, <span id = "20" onclick = "size(20)">20 pt</span>, <span id = "30" onclick = "size(30)">30 pt</span></b></div>
+        <h2 align = "center">Задание 3</h2>
+        <img style="margin:10px 30px 30px 500px;height:25%;width:25%;" id="img" onclick="change_img()" src='_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg'>
+        <h2 align = "center">Задание 4</h2>
+        <div id="textTOimg" style="margin:10px 30px 30px 500px;font-size:20px;" onclick="text_to_img()">Tекст -> изображение</div>
+        <h2 align = "center">Задание 5</h2>
+        <img style="margin: 10px 30px 30px 500px;width: 250px;" id="res" onmouseover="change_size(1)" onmouseout="change_size(2)" src = '2165035.jpg'>
+        <h2 align = "center">Задание 6</h2>
+        <div id="1" style="margin: 10px 10px 10px 100px; text-align: center; font-size: 20px;" ondblclick="border(1)">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+        <div id="2" style="margin: 10px 10px 10px 100px; text-align: center; font-size: 20px;" ondblclick="border(2)">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac placerat justo. Sed nec aliquam ante.</div>
+        <script type="text/javascript">
+        let flag = false;
+            function color(clr){
+                switch(clr) {
+                    case 'red': 
+                        document.getElementById('red').style.color = 'red';
+                        break;
+                    case 'green': 
+                        document.getElementById('green').style.color = 'green';
+                        break;
+                    case 'blue':
+                        document.getElementById('blue').style.color = 'blue';
+                        break;
+                    case 'yellow':
+                    document.getElementById('yellow').style.color = 'yellow';
+                        break;
+                    case 'purple':
+                        document.getElementById('purple').style.color = 'purple';
+                        break;
+                    case 'orange':
+                        document.getElementById('orange').style.color = 'orange';
+                        break;
+                    case 'lime':
+                        document.getElementById('lime').style.color = 'lime';
+                        break; 
+               }
+            }
+
+            function size(sz){
+                document.getElementById(sz).style.fontSize = sz + 'px';
+            }
+
+            function change_img(){
+                if (flag)
+                document.getElementById('img').src = '_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg'
+            else
+                document.getElementById('img').src = '2165035.jpg'
+            flag = !flag;
+            }
+
+            function text_to_img() {
+            if (flag)
+                document.getElementById('textTOimg').innerHTML = "Текст -> изображение";
+            else
+                document.getElementById('textTOimg').innerHTML = "<img src = '_94253475_39f402cd-767f-4ffd-8f43-324465ea1cff.jpg' style = 'margin:30px auto;height:25%;width:25%;'>";
+            flag = !flag;
+            }
+
+            function change_size(s){
+                if(s==1){
+                    document.getElementById('res').style.width = "400px";
+                    console.log("300px");
+                }
+                else {
+                    document.getElementById('res').style.width = "250px";
+                    console.log("200px");                }
+
+            }                   
+
+            function border(mouse){
+                if(flag)
+                    document.getElementById(mouse).style.border = "5px double crimson";
+                else 
+                    document.getElementById(mouse).style.border = "0px double crimson";
+                flag = !flag;
+            }
+
+        </script>
+    </body>
+</html>

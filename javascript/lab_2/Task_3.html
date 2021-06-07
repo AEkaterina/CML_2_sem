@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Задание 3</title>
+        <style>
+            table{
+                border-collapse: collapse;
+                font-family: Georgia;
+                border: 2px solid black;
+                margin: 50px;
+                padding: 10px;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+            }
+            table tr:first-child td:nth-child(1n), table tr:nth-child(1n) td:first-child{
+                background:orchid;
+            }
+        </style>
+
+        <script type='text/javascript'>
+            a = parseInt(prompt("Введите первое число","а"));
+            b = parseInt(prompt("Введите второе число","b"));
+            document.write('<table>');
+            
+            document.write('<tr>');
+            document.write('<td>' + "Радиус" + '</td>' + '<td>' + "Площадь  круга" + '</td>' + '<td>' + "Длина окружности" + '</td>');
+            document.write('</tr>');
+                do{
+                    document.write('<tr>');
+                    document.write('<td>' + a.toFixed(1) + '</td>' + '<td>' + (a * a * Math.PI).toFixed(2) + '</td>' + '<td>' + (2 * Math.PI * a).toFixed(2) + '</td>');
+                    document.write('</tr>');
+                    a += 0.3;
+                }while(a<b);
+            document.write('</table>');
+        </script>
+    </head>
+    <body>        
+    </body>
+</html>

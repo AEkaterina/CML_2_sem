@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Движение по линии</title>
+        <style type="text/css">
+           #img {
+            margin-left: 1000px;
+            width: 250px;
+            height: 290px;
+           }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        
+    </head>
+    <script type="text/javascript">
+    let x = 1000;
+    let a;
+
+
+    function move_img(){
+        a = setInterval("move()", 1);         //повторяет функцию с задержкой в 1 мс, т е каждые 1 мс  
+    }
+
+    function move(){                                            //движение картинки
+        if(x == 0)                                              //если картинка на конечной позиции
+        {
+            clearInterval(a);                                   //останавдиваем выполнение функции
+        }
+        else {
+            x--;                                                
+            $("#img").css("margin-left", x + "px");             
+        }
+    }
+    </script>
+    <body>
+    <img id="img" src="584c55a0ef86d158ea2e7cd5.png" onclick="move_img()">        
+    </body>    
+</html>

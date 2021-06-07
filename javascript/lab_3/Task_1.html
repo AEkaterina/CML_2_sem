@@ -1,0 +1,28 @@
+        <script type='text/javascript'>
+          arr = new Array();
+          arr[0] = 6 * Math.pow(Math.PI, 2) + 3 * Math.pow(Math.E, 8); 
+          arr[1] = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.pow(Math.E, 3);
+          arr[2] = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+          arr[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+          let min = arr[0];  let id_min = 0;
+          let max = arr[0];  let id_max = 0;
+          for(let i = 0; i < arr.length; i++ ) {
+              document.write(i + "-й элемент: " + arr[i] + "<br>");
+          }
+          for(let i = 0; i < arr.length; i++){
+              if(arr[i] < min){
+                min = arr[i];
+                id_min = i;
+              }
+              if(arr[i] > max){
+                  max = arr[i];
+                  id_max = i;
+              }
+          }
+          document.write("Минимальный элемент массива " + min + " под номером " + id_min + "<br>");
+          document.write("Максимальный элемент массива " + max + " под номером " + id_max);
+         </script>
+    </head>
+    <body>
+    </body>
+    </html>

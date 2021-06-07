@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабочка</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function print() {
+        let text = "";
+        text += "<p>Вы любите такие группы:</p>"
+        text += "<ul>";
+        let elems = document.forms.data.elements;
+        for (i = 0; i < elems.groups.length; i++) {
+            if (elems.groups[i].checked == true) {
+                text += "<li>" + elems.groups[i].value + "</li>";
+            }
+        }
+        text += "</ul>"
+        text += "<p>Мммм, все ясно, все яясно...</p>";
+        document.write(text);
+    }
+    </script>
+    <form name="data">
+        <p>Какие группы любите? :)</p>
+        <input type="checkbox" name="groups" value="Fall Out Boy">Fall Out Boy<br>
+        <input type="checkbox" name="groups" value="Green Day">Green Day<br>
+        <input type="checkbox" name="groups" value="Maroon 5">Maroon 5<br>
+        <input type="checkbox" name="groups" value="One Republic">One Republic<br>
+        <input type="checkbox" name="groups" value="Bring Me the Horizon">Bring Me the Horizon<br>
+        <input type="checkbox" name="groups" value="J:МОРС">J:МОРС<br>
+        <input type="checkbox" name="groups" value="30 Seconds To Mars">30 Seconds To Mars<br>
+        <input type="checkbox" name="groups" value="A Day To Remember">A Day To Remember<br>
+        <input type="checkbox" name="groups" value="Nizkiz">Nizkiz<br><br>
+        <input type="button" value="Написать список" onclick="print()">
+    </form>
+</body>
+</html>

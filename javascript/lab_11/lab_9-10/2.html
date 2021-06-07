@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Движение по прямой</title>
+        <style type="text/css">
+            #img {
+            width: 250px;
+            height: 290px;
+            }
+         </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+    </head>
+    <body>
+		<img src="584c55a0ef86d158ea2e7cd5.png" id="img" class="moving" onclick="move()" style="position:relative;"><br/>
+	<script type="text/javascript">
+		function move(){
+            $(document).ready(function(){
+                $('.moving').animate({left: '600px'}, 1500, function(){
+				$('.moving').animate({left: '0px'}, 1500);
+                });				
+            });			
+        }
+    </script>   
+
+</body>
+</html>

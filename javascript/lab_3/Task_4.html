@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Задание 4</title>
+        <style type = "text/css">
+            table{
+                border-collapse: collapse;
+                border: 2px solid black;
+                width: 200px;
+                height: 300px;
+            }
+            td{
+                font-family: Georgia;
+                font-size: 15pt;
+                border: 2px solid black;
+                text-align: center;
+            }
+            table tr:nth-child(1n) td:first-child{
+                background-color:navy;
+                color: oldlace;
+            }
+            table tr:nth-child(1n) td:last-child{
+                color: blue;
+            }            
+        </style>
+        <script type="text/javascript">
+            d = new Date();
+            document.write("<table>");
+            document.write("<tr>" + "<td>" + "Год" + "</td>" + "<td>" + d.getFullYear() + "</td>" + "</tr>");
+            document.write("<tr>" + "<td>" + "Месяц" + "</td>" + "<td>" + (1 + d.getMonth()) + "</td>" + "</tr>");
+            document.write("<tr>" + "<td>" + "День" + "</td>" + "<td>" + d.getDate() + "</td>" + "</tr>");
+            document.write("<tr>" + "<td>" + "Час" + "</td>" + "<td>" + d.getHours() + "</td>" + "</tr>");
+            document.write("<tr>" + "<td>" + "Минуты" + "</td>" + "<td>" + d.getMinutes() + "</td>" + "</tr>");
+            document.write("<tr>" + "<td>" + "Секунды" + "</td>" + "<td>" + d.getSeconds() + "</td>" + "</tr>");
+            document.write("</table>");
+        </script>
+    </head>
+    <body>        
+    </body>
+</html>

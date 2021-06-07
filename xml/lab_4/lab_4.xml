@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "lab_4.xsl" ?>
+
+<group>
+    
+    <student>
+        <surname>Володина</surname>
+        <name>Ангелина</name>
+        <date>22.09.2001</date>
+        <mark>7.1</mark>
+    </student>
+
+    <student>
+        <surname>Александрова</surname>
+        <name>Анастасия</name>
+        <date>23.10.2002</date>
+        <mark>5.8</mark>
+    </student>
+
+    <student>
+        <surname>Казакова</surname>
+        <name>Наталья</name>
+        <date>11.12.2001</date>
+        <mark>8.5</mark>
+    </student>
+
+    <student>
+        <surname>Азаренко</surname>
+        <name>Николай</name>
+        <date>13.05.2002</date>
+        <mark>6.0</mark>
+    </student>
+
+    <student>
+        <surname>Озеров</surname>
+        <name>Михаил</name>
+        <date>05.09.2001</date>
+        <mark>6.4</mark>
+    </student>
+
+    <student>
+        <surname>Мазаник</surname>
+        <name>Светлана</name>
+        <date>29.08.2002</date>
+        <mark>5.3</mark>
+    </student>
+
+    <student>
+        <surname>Урбан</surname>
+        <name>Александр</name>
+        <date>03.07.2001</date>
+        <mark>5.9</mark>
+    </student>
+
+</group>

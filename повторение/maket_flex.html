@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Maket</title>
+        <style type="text/css">
+        .main{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        }
+        .top{
+            padding-top: 17px;
+            color: blue;
+            font-family: "Arial";
+            font-size: 30pt;
+            text-align: center;
+            letter-spacing: 1pt;
+            background-color: lightblue;
+            height: 70px;
+        }
+        .left{
+            flex-grow: 1;
+            color: black;
+            font-family: "Arial";
+            text-align: justify;
+            font-size: 18pt; 
+            background-color: #F0E68C;
+            width: 200px;
+        }
+        .left div{
+            display: flex;
+        }
+        .right{
+            flex-basis: 1100px;
+            flex-grow: 3;
+
+        }
+        .bottom{
+            padding-top: 17px;
+            color: blue;
+            font-family: "Arial";
+            font-size: 30pt;
+            text-align: center;
+            letter-spacing: 1pt;
+            background-color: lightblue;
+            height: 70px;
+        }
+        .picture{
+            float: left;
+            margin: 17px;
+        }
+        #football{
+            text-align: center;
+            font-size: 30pt;
+            font-weight: bolder;
+        }
+        #text{
+            margin: 17px;
+            font-family: "Arial";
+            font-size: 23pt;
+        }
+        #ul{
+            color: black;
+            font-weight: bolder;
+            text-align:justify;
+            margin-left: 17px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="top">ПРИВЕТ УЧАСТНИКАМ СОРЕВНОВАНИЙ!</div>
+        <div class="main">
+            <div class="left"><p id="ul">Виды спорта:</p>
+                <ul>
+                    <li><a href="#">конькобежный спорт</a></li>
+                    <li><a href="#">биатлон</a></li>
+                    <li><a href="#">футбол</a></li>
+                    <li><a href="#">стрельба из лука</a></li>
+                    <li><a href="#">прыжки в длину</a></li>
+                    <li><a href="#">прыжки  в высоту</a></li>
+                    <li><a href="#">фигурное катание</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <p id="football">Футбол</p>
+                <img src="aiBb40e_xiw.jpg" width="340" height="220" class="picture">
+                <p id="text">Футбол - командный вид спорта, в котором целью является забить мяч в ворота соперника ногами или другими частями тела(кроме рук) большее количество раз, чем команда соперника.<br><br>
+                    Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих принципов.</p>
+            </div>
+        </div>
+        <div class="bottom">ГЛАВНОЕ НЕ ПОБЕДА, А УЧАСТИЕ!</div>
+    </body>
+</html>

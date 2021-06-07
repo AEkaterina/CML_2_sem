@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Я, <mark>Астапкина Екатерина</mark>, изучаю HTML5</h1>
+        </header>
+        <main>
+            <p>Звуки ночной природы</p>
+            <audio src="jungle-night_f11tpo4d.mp3" controls="controls"></audio>
+            <p>Звездное небо</p>
+            <video src="Star - 6962.mp4" controls="controls" width="500" height="300"></video>
+            
+            <script>
+                function getLocation() {
+                    navigator.geolocation.getCurrentPosition(showLocation);
+                }
+
+                function showLocation(position) {
+                    document.write("Широта: " + position.coords.latitude + "</br>");
+                    document.write("Долгота: " + position.coords.longitude);
+                }
+            </script>
+            <p>Узнать мои координаты: </p>
+            <input type="button" value="Coordinates" onclick="getLocation()"> 
+        </main>
+    </body>
+</html>
